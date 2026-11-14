@@ -11,18 +11,20 @@ TransLang is a browser extension that translates text you select on web pages.
   Chrome by Chrome's built-in translator, in other browsers (Firefox, Edge, Brave, Opera, …) by
   Bergamot, Mozilla's open-source translation engine, which is included in the extension. It is
   **never sent** to the developer or to any other server.
+- **Your browser's language settings:** read on your device to choose sensible default
+  languages (for example the language to translate into). They are not sent anywhere.
 - **Page address (hostname only):** the site name (for example `wikipedia.org`) is saved next to
   each entry in your translation history so you can see where it came from. Full page addresses
   are not stored.
 
 ## What TransLang stores, and where
 
-| Data                                                        | Where                                                           | Shared?                                                              |
-| ----------------------------------------------------------- | --------------------------------------------------------------- | -------------------------------------------------------------------- |
-| Settings (target language, trigger mode, disabled sites, …) | Your browser's extension storage (`chrome.storage.sync`)        | Synced only between your own browsers if you are signed in to Chrome |
-| Translation cache                                           | Your device (IndexedDB)                                         | No                                                                   |
-| Translation history (if enabled)                            | Your device (IndexedDB)                                         | No                                                                   |
-| Language packs                                              | Your device (managed by Chrome, or IndexedDB in other browsers) | No                                                                   |
+| Data                                                        | Where                                                           | Shared?                                                                            |
+| ----------------------------------------------------------- | --------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| Settings (target language, trigger mode, disabled sites, …) | Your browser's extension storage (sync)                         | Synced only between your own browsers if you are signed in to your browser account |
+| Translation cache                                           | Your device (IndexedDB)                                         | No                                                                                 |
+| Translation history (if enabled)                            | Your device (IndexedDB)                                         | No                                                                                 |
+| Language packs                                              | Your device (managed by Chrome, or IndexedDB in other browsers) | No                                                                                 |
 
 You can turn off history, clear the history and the cache in TransLang's settings, and uninstalling
 the extension deletes all of its data.
