@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TransLang Privacy Policy</title>
+    <meta
+      name="description"
+      content="TransLang translates the text you select on your device. Your text is never sent to the developer or any other server."
+    />
+    <link rel="canonical" href="https://usefulhands.github.io/translang-privacy/" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+    <style>
+      /* Brand: Ink, Graphite, Mist, Signal Flow, Select Blue; Inter + Space Grotesk (self-hosted, OFL). */
+      @font-face {
+        font-family: 'Inter';
+        font-weight: 400;
+        font-display: swap;
+        src: url('fonts/inter-latin-400-normal.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'Inter';
+        font-weight: 600;
+        font-display: swap;
+        src: url('fonts/inter-latin-600-normal.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'Space Grotesk';
+        font-weight: 700;
+        font-display: swap;
+        src: url('fonts/space-grotesk-latin-700-normal.woff2') format('woff2');
+      }
+      :root {
+        --page: #f3f6f4;
+        --panel: linear-gradient(135deg, #9dff4f 0%, #35ff89 50%, #22e6b0 100%);
+        --panel-shadow: 0 20px 50px rgba(14, 20, 17, 0.12);
+        --card: #ffffff;
+        --fg: #0e1411;
+        --muted: #3a4640;
+        --border: #dce3df;
+        --row: #f3f6f4;
+        --link: #1f6feb;
+        --code: #eef2ef;
+        --logo-ring: 0 0 0 2px #ffffff, 0 4px 12px rgba(14, 20, 17, 0.2);
+        color-scheme: light dark;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --page: #0a0f0c;
+          --panel:
+            radial-gradient(900px 360px at 50% -140px, rgba(53, 255, 137, 0.24), transparent 70%),
+            #0e1411;
+          --panel-shadow: 0 0 0 1px #1d2722, 0 20px 50px rgba(0, 0, 0, 0.45);
+          --card: #18211d;
+          --fg: #f3f6f4;
+          --muted: #9aa6a0;
+          --border: #2a3530;
+          --row: #121a16;
+          --link: #6aa5ff;
+          --code: #212b26;
+          --logo-ring: none;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--page);
+        color: var(--fg);
+        font: 16px/1.65 Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        display: flow-root;
+      }
+      .panel {
+        width: calc(100% - 32px);
+        max-width: 860px;
+        margin: 32px auto 40px;
+        padding: 36px 28px 24px;
+        background: var(--panel);
+        border-radius: 28px;
+        box-shadow: var(--panel-shadow);
+      }
+      header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+        margin-bottom: 28px;
+      }
+      header img {
+        border-radius: 24%;
+        box-shadow: var(--logo-ring);
+      }
+      h1,
+      h2 {
+        font-family: 'Space Grotesk', Inter, system-ui, sans-serif;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin: 0;
+      }
+      h1 {
+        font-size: clamp(28px, 5vw, 36px);
+      }
+      .updated {
+        margin: 0;
+        color: var(--muted);
+        font-size: 15px;
+      }
+      main {
+        background: var(--card);
+        border-radius: 20px;
+        padding: 28px clamp(20px, 4vw, 40px) 12px;
+        box-shadow:
+          0 1px 2px rgba(14, 20, 17, 0.06),
+          0 10px 30px rgba(14, 20, 17, 0.1);
+      }
+      section {
+        margin-bottom: 28px;
+      }
+      h2 {
+        display: inline-block;
+        font-size: 21px;
+        margin-bottom: 12px;
+        text-decoration: underline;
+        text-decoration-color: var(--fg);
+        text-decoration-thickness: 3px;
+        text-underline-offset: 7px;
+      }
+      p,
+      ul {
+        margin: 0 0 12px;
+      }
+      ul {
+        padding-left: 22px;
+      }
+      li {
+        margin-bottom: 8px;
+      }
+      li::marker {
+        color: #22c98a;
+      }
+      strong {
+        font-weight: 600;
+      }
+      code {
+        font: 0.9em ui-monospace, 'Cascadia Code', Consolas, monospace;
+        background: var(--code);
+        padding: 1px 6px;
+        border-radius: 6px;
+      }
+      a {
+        color: var(--link);
+      }
+      .table-wrap {
+        overflow-x: auto;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        margin: 4px 0 14px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 15px;
+        min-width: 560px;
+      }
+      th,
+      td {
+        text-align: left;
+        vertical-align: top;
+        padding: 10px 14px;
+        border-bottom: 1px solid var(--border);
+      }
+      th {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--muted);
+        background: var(--row);
+      }
+      tr:last-child td {
+        border-bottom: 0;
+      }
+      .intro {
+        font-size: 17px;
+      }
+      footer {
+        text-align: center;
+        margin: 18px 0 0;
+        color: var(--fg);
+        font-size: 14px;
+      }
+      @media (max-width: 520px) {
+        .panel {
+          width: calc(100% - 16px);
+          margin: 8px auto 16px;
+          padding: 28px 12px 16px;
+          border-radius: 22px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="panel">
+      <header>
+        <img src="logo-128.png" alt="" width="64" height="64" />
+        <h1>TransLang Privacy Policy</h1>
+        <p class="updated"><em>Last updated: 14 November 2026</em></p>
+      </header>
+
+      <main>
+        <p class="intro">TransLang is a browser extension that translates text you select on web pages.</p>
+
+        <section>
+          <h2>What TransLang processes</h2>
+          <ul>
+            <li>
+              <strong>Selected text:</strong> when you ask TransLang to translate (by selecting text, clicking
+              the icon, or using the context menu), the selected text is translated
+              <strong>on your device</strong>: in Google Chrome by Chrome's built-in translator, in other
+              browsers (Firefox, Edge, Brave, Opera, …) by Bergamot, Mozilla's open-source translation engine,
+              which is included in the extension. It is <strong>never sent</strong> to the developer or to any
+              other server.
+            </li>
+            <li>
+              <strong>Your browser's language settings:</strong> read on your device to choose sensible default
+              languages (for example the language to translate into). They are not sent anywhere.
+            </li>
+            <li>
+              <strong>Page address (hostname only):</strong> the site name (for example
+              <code>wikipedia.org</code>) is saved next to each entry in your translation history so you can see
+              where it came from. Full page addresses are not stored.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>What TransLang stores, and where</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Data</th>
+                  <th>Where</th>
+                  <th>Shared?</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Settings (target language, trigger mode, disabled sites, …)</td>
+                  <td>Your browser's extension storage (sync)</td>
+                  <td>Synced only between your own browsers if you are signed in to your browser account</td>
+                </tr>
+                <tr>
+                  <td>Translation cache</td>
+                  <td>Your device (IndexedDB)</td>
+                  <td>No</td>
+                </tr>
+                <tr>
+                  <td>Translation history (if enabled)</td>
+                  <td>Your device (IndexedDB)</td>
+                  <td>No</td>
+                </tr>
+                <tr>
+                  <td>Language packs</td>
+                  <td>Your device (managed by Chrome, or IndexedDB in other browsers)</td>
+                  <td>No</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            You can turn off history, clear the history and the cache in TransLang's settings, and uninstalling
+            the extension deletes all of its data.
+          </p>
+        </section>
+
+        <section>
+          <h2>Language pack downloads</h2>
+          <p>
+            Language packs are downloaded once, when you click "Download" in TransLang's settings: in Google
+            Chrome from Google (by Chrome itself), in other browsers from TransLang's model mirror on GitHub Pages
+            (<code>usefulhands.github.io/translang-models</code>, unmodified copies of the translation models
+            Firefox uses, by Mozilla). These downloads contain only translation models; no text you select and no
+            personal data is sent, and no account is needed.
+          </p>
+          <p>
+            As with any download, the server sees your IP address and may keep it in its access logs under its
+            own privacy policy: <a href="https://policies.google.com/privacy">Google Privacy Policy</a> for
+            Chrome's packs,
+            <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement"
+              >GitHub General Privacy Statement</a
+            >
+            for the mirror. GitHub does not share these logs with the developer, so the developer cannot see who
+            downloads a language pack.
+          </p>
+        </section>
+
+        <section>
+          <h2>What TransLang does not do</h2>
+          <ul>
+            <li>No accounts, no analytics, no tracking, no advertising.</li>
+            <li>No data is sold, transferred or shared with third parties.</li>
+            <li>
+              No remote code is loaded (the translation engine is part of the extension; only model data is
+              downloaded).
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Permissions</h2>
+          <ul>
+            <li>
+              <em>Read and change data on all websites</em> (content script): needed to read the text you select
+              and show the translation tooltip next to it.
+            </li>
+            <li><code>storage</code>: save your settings.</li>
+            <li><code>unlimitedStorage</code>: keep downloaded language packs (about 20–40 MB each) on your device.</li>
+            <li><code>offscreen</code> (Chromium browsers): run the on-device translators in a hidden extension page.</li>
+            <li><code>contextMenus</code>: the "Translate with TransLang" right-click item.</li>
+            <li><code>activeTab</code>: show the current site's name in the popup (for "Active on this site").</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Contact</h2>
+          <p>
+            Questions: contact the developer through the extension's store listing (Chrome Web Store, Microsoft
+            Edge Add-ons or Firefox Add-ons).
+          </p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
