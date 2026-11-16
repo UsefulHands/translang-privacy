@@ -266,6 +266,11 @@
                   <td>Your device (managed by Chrome, or IndexedDB in other browsers)</td>
                   <td>No</td>
                 </tr>
+                <tr>
+                  <td>Languages you removed from the Languages tab</td>
+                  <td>Your browser's extension storage (local, this device only)</td>
+                  <td>No</td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -317,7 +322,7 @@
             </li>
             <li><code>storage</code>: save your settings.</li>
             <li><code>unlimitedStorage</code>: keep downloaded language packs (about 20–70 MB each) on your device.</li>
-            <li><code>offscreen</code> (Chromium browsers): run the on-device translators in a hidden extension page.</li>
+            <li><code>offscreen</code> (Chromium browsers): run the on-device translators in a hidden extension page, and download the language packs you asked for there, so a download continues after you close the settings page.</li>
             <li><code>contextMenus</code>: the "Translate with TransLang" right-click item.</li>
             <li><code>activeTab</code>: show the current site's name in the popup (for "Active on this site").</li>
           </ul>
