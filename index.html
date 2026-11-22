@@ -6,7 +6,7 @@
     <title>TransLang Privacy Policy</title>
     <meta
       name="description"
-      content="TransLang translates the text you select on your device. Your text is never sent to the developer or any other server."
+      content="TransLang translates the text you select on your device. Your text is never sent to the developer, and to no other server unless you choose online translation."
     />
     <link rel="canonical" href="https://usefulhands.github.io/translang-privacy/" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
@@ -205,7 +205,7 @@
       <header>
         <img src="logo-128.png" alt="" width="64" height="64" />
         <h1>TransLang Privacy Policy</h1>
-        <p class="updated"><em>Last updated: 16 November 2026</em></p>
+        <p class="updated"><em>Last updated: 23 November 2026</em></p>
       </header>
 
       <main>
@@ -219,8 +219,8 @@
               the icon, or using the context menu), its language is detected and the text is translated
               <strong>on your device</strong>: in Google Chrome by Chrome's built-in translator, in other
               browsers (Firefox, Edge, Brave, Opera, …) by Bergamot, Mozilla's open-source translation engine,
-              which is included in the extension. It is <strong>never sent</strong> to the developer or to any
-              other server.
+              which is included in the extension. It is <strong>never sent</strong> to the developer, and to no
+              other server unless you use online translation (see below).
             </li>
             <li>
               <strong>Your browser's language settings:</strong> read on your device to choose sensible default
@@ -247,7 +247,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>Settings (target language, trigger mode, disabled sites, …)</td>
+                  <td>Settings (target language, trigger mode, online translation, disabled sites, …)</td>
                   <td>Your browser's extension storage (sync)</td>
                   <td>Synced only between your own browsers if you are signed in to your browser account</td>
                 </tr>
@@ -281,6 +281,37 @@
         </section>
 
         <section>
+          <h2>Online translation (optional)</h2>
+          <p>
+            Google Translate translates long or tricky sentences better than the offline models. TransLang can
+            use it, but only when you ask:
+          </p>
+          <ul>
+            <li>
+              <strong>When:</strong> when you click "Improve online" under a translation or "Translate online"
+              next to "Download", or for every selection if you choose "Always" under Settings › Behavior ›
+              Online translation. The first time, TransLang tells you once that the text leaves your computer
+              (in Firefox, Firefox asks for your permission instead). Nothing is sent before that.
+            </li>
+            <li>
+              <strong>What is sent:</strong> only the selected text and the two language codes, to Google
+              Translate (<code>translate.googleapis.com</code>). No cookies, no Google account, no page address
+              and nothing else is sent. As with any request, Google sees your IP address; its
+              <a href="https://policies.google.com/privacy">Google Privacy Policy</a> applies.
+            </li>
+            <li><strong>Never to the developer:</strong> the text goes straight from your browser to Google.</li>
+            <li>
+              <strong>Stored like any translation:</strong> online translations are kept in the cache and history
+              on your device, as above.
+            </li>
+            <li>
+              <strong>Turn it off:</strong> Settings › Behavior › Online translation › Off. Then nothing ever
+              leaves your device.
+            </li>
+          </ul>
+        </section>
+
+        <section>
           <h2>Language pack downloads</h2>
           <p>
             Language packs are downloaded once, when you click "Download" in TransLang's settings: in Google
@@ -305,7 +336,10 @@
           <h2>What TransLang does not do</h2>
           <ul>
             <li>No accounts, no analytics, no tracking, no advertising.</li>
-            <li>No data is sold, transferred or shared with third parties.</li>
+            <li>
+              No data is sold, or shared for any other purpose. The only data that ever leaves your device is the
+              text you choose to translate online, sent to Google Translate to translate it.
+            </li>
             <li>
               No remote code is loaded (the translation engine is part of the extension; only model data is
               downloaded).
@@ -326,6 +360,10 @@
             <li><code>contextMenus</code>: the "Translate with TransLang" right-click item.</li>
             <li><code>activeTab</code>: show the current site's name in the popup (for "Active on this site").</li>
           </ul>
+          <p>
+            Online translation needs no extra permission. Firefox lists it as optional data collection
+            ("website content") and asks for your consent before the first online translation.
+          </p>
         </section>
 
         <section>
