@@ -221,7 +221,7 @@
       <header>
         <img src="logo-128.png" alt="" width="64" height="64" />
         <h1>TransLang Privacy Policy</h1>
-        <p class="updated"><em>Last updated: 24 November 2026</em></p>
+        <p class="updated"><em>Last updated: 26 November 2026</em></p>
       </header>
 
       <main>
@@ -328,6 +328,24 @@
         </section>
 
         <section>
+          <h2>PDFs and Google Docs</h2>
+          <ul>
+            <li>
+              <strong>PDFs:</strong> when you click "Open with TransLang" on a PDF (or open one from TransLang's toolbar
+              menu), TransLang's own viewer downloads that PDF from its address, the same way the browser's viewer does
+              (with your browser's cookies, so PDFs behind a login open too), or reads the file you pick or drop. The PDF
+              is read and drawn <strong>on your device</strong>; it is not sent anywhere and not stored. Selecting text in
+              it works as on web pages. PDFs keep opening in your browser's own viewer unless you choose TransLang.
+            </li>
+            <li>
+              <strong>Google Docs:</strong> TransLang asks Google Docs to add its accessible text layer (the same switch
+              Chrome's Reading Mode and other extensions use), so that text you select there can be read. Nothing is sent
+              to Google or anyone else because of it.
+            </li>
+          </ul>
+        </section>
+
+        <section>
           <h2>Language pack downloads</h2>
           <p>
             Language packs are downloaded once, when you click "Download" in TransLang's settings: in Google
@@ -369,14 +387,16 @@
           <h2>Permissions</h2>
           <ul>
             <li>
-              <em>Read and change data on all websites</em> (content script): needed to read the text you select
-              and show the translation tooltip next to it.
+              <em>Read and change data on all websites</em> (content script and host access): needed to read the
+              text you select and show the translation tooltip next to it, and, for TransLang's PDF viewer, to download
+              a PDF you chose to open with TransLang.
             </li>
             <li><code>storage</code>: save your settings.</li>
             <li><code>unlimitedStorage</code>: keep downloaded language packs (about 20–70 MB each) on your device.</li>
             <li><code>offscreen</code> (Chromium browsers): run the on-device translators in a hidden extension page, and download the language packs you asked for there, so a download continues after you close the settings page.</li>
-            <li><code>contextMenus</code>: the "Translate with TransLang" right-click item.</li>
+            <li><code>contextMenus</code>: the "Translate with TransLang" right-click item, and "Open a PDF with TransLang" on the toolbar icon.</li>
             <li><code>activeTab</code>: show the current site's name in the popup (for "Active on this site").</li>
+            <li><code>webRequest</code> (Firefox only): notice when a tab shows a PDF, by reading the type in the page's response headers, to show the "Open with TransLang" icon. Nothing is blocked, changed, stored or sent.</li>
           </ul>
           <p>
             Online translation needs no extra permission. Firefox lists it as optional data collection
